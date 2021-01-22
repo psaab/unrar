@@ -3,10 +3,11 @@
 
 # Linux using GCC
 CXX=c++
-CXXFLAGS=-O2 -Wno-logical-op-parentheses -Wno-switch -Wno-dangling-else
+CXXFLAGS=-O2 -Wno-logical-op-parentheses -Wno-switch -Wno-dangling-else -DOPENSSL_AES
 LIBFLAGS=-fPIC
 DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP
 STRIP=strip
+LIBS=-lcrypto
 AR=ar
 LDFLAGS=-pthread
 DESTDIR=/usr
