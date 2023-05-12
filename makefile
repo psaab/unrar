@@ -5,11 +5,12 @@
 CXX=c++
 CXXFLAGS=-march=native -O2 -std=c++11 -Wno-logical-op-parentheses -Wno-switch -Wno-dangling-else
 LIBFLAGS=-fPIC
-DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP
+DEFINES=-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DRAR_SMP -DOPENSSL_AES
 STRIP=strip
 AR=ar
 LDFLAGS=-pthread
 DESTDIR=/usr
+LIBS=-lcrypto
 
 ##########################
 
